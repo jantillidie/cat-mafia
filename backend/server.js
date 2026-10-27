@@ -1,7 +1,6 @@
 import express from 'express'
 import cors from 'cors'
 import fs from 'fs/promises'
-import { error } from 'console'
 
 const FILE = './members.json'
 const PORT = 8989
@@ -20,24 +19,34 @@ app.get('/api/members', async (req, res) => {
     }
 })
 
-app.post('/api/members', (req, res) => {
-    const cat = req.body
-    cat.id = Date.now()
-    cat.avatarUrl = `https://robohash.org/${cat.name}.png?set=set4`
-    console.log(cat)
-    res.sendStatus(201)
+app.post('/api/members', async (req, res) => {
+    const { name, rank, specialty } = req.body
+
+    if (!name || !rank) {
+        return res.status(400).json({ error: "Mind. Name und Rang eintragen." })
+    }
+    try {
+        const text = await fs.readFile(FILE, 'utf-8')
+        const members = JSON.parse(text)
+
+        const cat = {
+            id: Date.now(),
+            name,
+            rank,
+            specialty: specialty || '',
+            avatarUrl: `https://robohash.org/${encodeURIComponent(name)}.png?set=set4`,
+            status: 'active'
+        }
+
+        members.push(cat)
+        await fs.writeFile(FILE, JSON.stringify(members, null, 2))
+
+        res.status(201).json(cat)
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({ error: "Mitglied konnte nicht gespeichert werden." })
+    }
+
 })
-
-
-// https://robohash.org/christ.png?set=set4
-
-// {
-//     "id": 2,
-//     "name": "Miaufioso",
-//     "rank": "Capo",
-//     "specialty": "Informationsbeschaffung",
-//     "avataUrl": "https://robohash.org/peter.png?set=set4",
-//     "status": "active"
-// }
 
 app.listen(PORT, () => console.log(`Die Meowfia schnurrt auf Port: ${PORT}`))

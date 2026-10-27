@@ -14,5 +14,13 @@
     "specialty": "Informationsbeschaffung",
     "avatarUrl": "https://robohash.org/Miaufioso.png?set=set4",
     "status": "active"
+  },
+  {
+    "id": 1793097604442,
+    "name": "Clawdio",
+    "rank": "Underboss",
+    "specialty": "Finanzen",
+    "avatarUrl": "https://robohash.org/Clawdio.png?set=set4",
+    "status": "active"
   }
 ]
