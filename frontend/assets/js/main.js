@@ -44,4 +44,43 @@ async function loadMembers() {
     }
 }
 
+const form = document.querySelector('#member-form')
+const feedback = document.querySelector('#feedback')
+
+form.addEventListener('submit', async (event) => {
+    event.preventDefault()
+
+    const button = form.querySelector('button')
+    button.disabled = true
+    feedback.textContent = 'Wird gespeichert...'
+    feedback.className = ''
+
+    const data = Object.fromEntries(new FormData(form))
+
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+
+        const result = await response.json()
+
+        if (!response.ok) {
+            throw new Error(result.error || 'Unbekannter Fehler')
+        }
+
+        feedback.textContent = `Willkommen in der Familie, ${result.name}!`
+        feedback.className = 'success'
+        form.reset()
+        loadMembers()
+    } catch (err) {
+        console.error(err)
+        feedback.textContent = 'Fehler: ' + err.message
+        feedback.className = 'error'
+    } finally {
+        button.disabled = false
+    }
+})
+
 loadMembers()

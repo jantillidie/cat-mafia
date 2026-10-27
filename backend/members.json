@@ -22,5 +22,45 @@
     "specialty": "Finanzen",
     "avatarUrl": "https://robohash.org/Clawdio.png?set=set4",
     "status": "active"
+  },
+  {
+    "id": 1793100988460,
+    "name": "Little Black One",
+    "rank": "Underboss",
+    "specialty": "Nichts tun",
+    "avatarUrl": "https://robohash.org/Little%20Black%20One.png?set=set4",
+    "status": "active"
+  },
+  {
+    "id": 1793103334968,
+    "name": "Crasso Pempek",
+    "rank": "Capo",
+    "specialty": "Rumliegen",
+    "avatarUrl": "https://robohash.org/Crasso%20Pempek.png?set=set4",
+    "status": "active"
+  },
+  {
+    "id": 1793103504776,
+    "name": "Big Black One",
+    "rank": "Don",
+    "specialty": "Geld ausgeben",
+    "avatarUrl": "https://robohash.org/Big%20Black%20One.png?set=set4",
+    "status": "active"
+  },
+  {
+    "id": 1793103757648,
+    "name": "Curriosity killed the Cat",
+    "rank": "Soldier",
+    "specialty": "Stress machen",
+    "avatarUrl": "https://robohash.org/Curriosity%20killed%20the%20Cat.png?set=set4",
+    "status": "active"
+  },
+  {
+    "id": 1793103993053,
+    "name": "Little Big Cat",
+    "rank": "Associate",
+    "specialty": "Wichtig tun",
+    "avatarUrl": "https://robohash.org/Little%20Big%20Cat.png?set=set4",
+    "status": "active"
   }
 ]
