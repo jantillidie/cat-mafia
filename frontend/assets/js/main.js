@@ -73,6 +73,7 @@ form.addEventListener('submit', async (event) => {
         feedback.textContent = `Willkommen in der Familie, ${result.name}!`
         feedback.className = 'success'
         form.reset()
+        updatePreview()
         loadMembers()
     } catch (err) {
         console.error(err)
@@ -82,5 +83,25 @@ form.addEventListener('submit', async (event) => {
         button.disabled = false
     }
 })
+
+const nameInput = document.querySelector('#name')
+const previewImg = document.querySelector('#preview-img')
+const previewText = document.querySelector('#preview-text')
+
+function updatePreview() {
+    const name = nameInput.value.trim()
+
+    if (name === '') {
+        previewImg.hidden = true
+        previewText.textContent = 'Gib einen Namen ein, dann erscheint hier der Avatar.'
+        return
+    }
+
+    previewImg.src = `https://robohash.org/${encodeURIComponent(name)}.png?set=set4`
+    previewImg.hidden = false
+    previewText.textContent = 'Dein Avatar wird automatisch aus dem Namen erstellt.'
+}
+
+nameInput.addEventListener('input', updatePreview)
 
 loadMembers()

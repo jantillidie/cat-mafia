@@ -62,5 +62,13 @@
     "specialty": "Wichtig tun",
     "avatarUrl": "https://robohash.org/Little%20Big%20Cat.png?set=set4",
     "status": "active"
+  },
+  {
+    "id": 1793104611615,
+    "name": "Another Little Cat",
+    "rank": "Associate",
+    "specialty": "Miauen",
+    "avatarUrl": "https://robohash.org/Another%20Little%20Cat.png?set=set4",
+    "status": "active"
   }
 ]
