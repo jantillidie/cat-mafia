@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,39 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/main.js" defer></script>
 </head>
+
 <body>
     <h1>Cat Mafia</h1>
+    <section>
+        <h2>Mitglieder ( <span id="member-count">0</span> )</h2>
+        <div id="members-list"></div>
+    </section>
+
+    <section>
+        <h2>Neues Mitglied anlegen</h2>
+        <form id="member-form">
+            <label for="name">Name *</label>
+            <input id="name" name="name" placeholder="z.B. Big Meowski" required>
+
+            <label for="rank">Rang *</label>
+            <select name="rank" id="rank" required>
+                <option value="">Bitte wählen</option>
+                <option>Don</option>
+                <option>Underboss</option>
+                <option>Consigliere</option>
+                <option>Capo</option>
+                <option>Made Man</option>
+                <option>Enforcer</option>
+                <option>Soldier</option>
+                <option>Associate</option>
+            </select>
+
+            <label for="specialty">Spezialgebiet</label>
+            <input name="specialty" id="specialty" placeholder="z.B. Finanzen, Spionage">
+            <button type="submit">Mitglied anlegen</button>
+        </form>
+        <p id="feedback"></p>
+    </section>
 </body>
+
 </html>
