@@ -26,7 +26,7 @@ app.post('/api/members', (req, res) => {
 //     "name": "Miaufioso",
 //     "rank": "Capo",
 //     "specialty": "Informationsbeschaffung",
-//     "avataUrl": "https://api.dicebear.com/10.x/sprouts/svg?seed=Miaufioso",
+//     "avataUrl": "https://robohash.org/peter.png?set=set4",
 //     "status": "active"
 // }
 
