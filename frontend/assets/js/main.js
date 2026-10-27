@@ -17,6 +17,7 @@ function createCard(cat) {
     const rank = document.createElement('span')
     rank.className = 'rank'
     rank.textContent = cat.rank
+    rank.dataset.rank = cat.rank
 
     const specialty = document.createElement('p')
     specialty.textContent = cat.specialty || '-'

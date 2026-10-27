@@ -10,42 +10,51 @@
 </head>
 
 <body>
-    <h1>Cat Mafia</h1>
-    <section>
-        <h2>Mitglieder ( <span id="member-count">0</span> )</h2>
-        <div id="members-list"></div>
-    </section>
+    <header class="hero">
+        <h1>Cat Mafia 🐾</h1>
+        <p>Starke Charaktere. Klare Aufgaben. Ein Ziel.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Mitglieder ( <span id="member-count">0</span> )</h2>
+            <div id="members-list"></div>
+        </section>
 
-    <section>
-        <h2>Neues Mitglied anlegen</h2>
-        <form id="member-form">
-            <label for="name">Name *</label>
-            <input id="name" name="name" placeholder="z.B. Big Meowski" required>
+        <section>
+            <h2>Neues Mitglied anlegen</h2>
+            <form id="member-form">
+                <label for="name">Name *</label>
+                <input id="name" name="name" placeholder="z.B. Big Meowski" required>
 
-            <label for="rank">Rang *</label>
-            <select name="rank" id="rank" required>
-                <option value="">Bitte wählen</option>
-                <option>Don</option>
-                <option>Underboss</option>
-                <option>Consigliere</option>
-                <option>Capo</option>
-                <option>Made Man</option>
-                <option>Enforcer</option>
-                <option>Soldier</option>
-                <option>Associate</option>
-            </select>
+                <label for="rank">Rang *</label>
+                <select name="rank" id="rank" required>
+                    <option value="">Bitte wählen</option>
+                    <option>Don</option>
+                    <option>Underboss</option>
+                    <option>Consigliere</option>
+                    <option>Capo</option>
+                    <option>Made Man</option>
+                    <option>Enforcer</option>
+                    <option>Soldier</option>
+                    <option>Associate</option>
+                </select>
 
-            <label for="specialty">Spezialgebiet</label>
-            <input name="specialty" id="specialty" placeholder="z.B. Finanzen, Spionage">
-            <h3>Vorschau</h3>
-            <div id="preview">
-                <img id="preview-img" alt="Avatar-Vorschau" width="120" height="120" hidden>
-                <p id="preview-text">Gib einen Namen ein, dann erscheint hier der Avatar.</p>
-            </div>
-            <button type="submit">Mitglied anlegen</button>
-        </form>
-        <p id="feedback"></p>
-    </section>
+                <label for="specialty">Spezialgebiet</label>
+                <input name="specialty" id="specialty" placeholder="z.B. Finanzen, Spionage">
+                <h3>Vorschau</h3>
+                <div id="preview">
+                    <img id="preview-img" alt="Avatar-Vorschau" width="120" height="120" hidden>
+                    <p id="preview-text">Gib einen Namen ein, dann erscheint hier der Avatar.</p>
+                </div>
+                <button type="submit">Mitglied anlegen</button>
+            </form>
+            <p id="feedback"></p>
+        </section>
 </body>
+</main>
+<footer>
+    <span>🐾 Good Cats. Bad Business.</span>
+    <span>Cat Mafia © 2026</span>
+</footer>
 
 </html>
