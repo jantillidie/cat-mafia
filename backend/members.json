@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Don Pempek",
+    "rank": "Don",
+    "specialty": "Strategie",
+    "avatarUrl": "https://robohash.org/DonPempek.png?set=set4",
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "name": "Miaufioso",
+    "rank": "Capo",
+    "specialty": "Informationsbeschaffung",
+    "avatarUrl": "https://robohash.org/Miaufioso.png?set=set4",
+    "status": "active"
+  }
+]
