@@ -1,3 +1,5 @@
 node_modules
+backend/members.json
+backend/data.json
 fiveserver.config.js
 tmp
